@@ -1,12 +1,12 @@
 ﻿using ChallangeApp;
 
-var user1 = new Employee("Kazik", "Kowalski", "45 lat");
-var user2 = new Employee("Jolanta", "Malinowska", "23 lat");
-var user3 = new Employee("Edek", "Zkrainykredek", "58 lat");
+User user1 = new User("Kazik", "Kowalski");
+User user2 = new User("Jolanta", "Malinowska");
+User user3 = new User("Edek", "Zkrainykredek");
 
 user1.AddScore(10);
 user1.AddScore(10);
-user1.AddScore(10);
+user1.AddMinusScore(10);
 user1.AddScore(10);
 user1.AddScore(10);
 
@@ -22,27 +22,6 @@ user3.AddScore(10);
 user3.AddScore(2);
 user3.AddScore(10);
 
-List<Employee> users = new List<Employee>()
-{
-    user1, user2, user3
-};
-
-int maxResult = -1;
-Employee userWithMaxResult = null;
-
-foreach (var user in users)
-{
-    if (user.Result > maxResult)
-    {
-        maxResult = user.Result;
-        userWithMaxResult = user;
-    }
-}
-
-Console.WriteLine("Pracownik, który otrzymał najwiekszą ilość punktów: " +
-    userWithMaxResult.Name+" "+userWithMaxResult.Surname+" "+userWithMaxResult.Age);
-Console.WriteLine("Punkty: "+ userWithMaxResult.Result);
-
-
-Console.ReadLine();
+var result = user1.Result;
+Console.WriteLine(result);
 

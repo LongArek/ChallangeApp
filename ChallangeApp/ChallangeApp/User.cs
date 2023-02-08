@@ -6,6 +6,10 @@
 
         private List<int> score = new List<int>();
 
+        public User(string name)
+        {
+            this.Name = name;
+        }
         public User(string name, string surname)
         {
             this.Name = name;

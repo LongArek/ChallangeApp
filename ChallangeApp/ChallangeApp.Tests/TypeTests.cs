@@ -3,58 +3,46 @@
     public class TypeTests
     {
         [Test]
-        public void IntegerNumberCheck()
+        public void MaxStats()
         {
             // arrange
-            var intNumber = 1;
-            var intNumber2 = 2;
-            // act   
-
+            var employee = new Employee("Arkadiusz", "Aleksiejuk")   ;
+            //act
+            employee.AddGrade(2);
+            employee.AddGrade(2);
+            employee.AddGrade(6);
+            var statistics = employee.GetStstistics();
             //assert
-            Assert.AreNotEqual(intNumber, intNumber2);
+            Assert.AreEqual(statistics.Max, 6.0f);
         }
 
         [Test]
-        public void StringValueCheck()
+        public void MinStats()
         {
             // arrange
-            var stringName = "Arek";
-            var stringName2 = "Arek";
-            // act   
-
+            var employee = new Employee("Arkadiusz", "Aleksiejuk");
+            //act
+            employee.AddGrade(2);
+            employee.AddGrade(2);
+            employee.AddGrade(6);
+            var statistics = employee.GetStstistics();
             //assert
-            Assert.AreEqual(stringName, stringName2);
+            Assert.AreEqual(statistics.Min, 2.0f);
         }
 
         [Test]
-        public void FloatNumberCheck()
+        public void AverageStats()
         {
             // arrange
-            var floatNumber = 5.0F;
-            var floatNumber2 = 5.0F;
-            // act   
-
+            var employee = new Employee("Arkadiusz", "Aleksiejuk");
+            //act
+            employee.AddGrade(2);
+            employee.AddGrade(2);
+            employee.AddGrade(6);
+            var statistics = employee.GetStstistics();
             //assert
-            Assert.AreEqual(floatNumber, floatNumber2);
-        }
-
-        [Test]
-        public void ReferenceTypeCheckTest()
-        {
-            // arrange
-            var user1 = GetUser("Arek");
-            var user2 = GetUser("Adam");
-            // act   
-
-            //assert
-            Assert.AreNotEqual(user1, user2);
-        }
-
-        private User GetUser(string name)
-        {
-            return new User(name);
+            Assert.AreEqual(statistics.Average, 3.33333325f);
         }
     }
 }
-
 

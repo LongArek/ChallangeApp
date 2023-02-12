@@ -6,7 +6,7 @@
         public void MaxStats()
         {
             // arrange
-            var employee = new Employee("Arkadiusz", "Aleksiejuk")   ;
+            var employee = new Employee("Arkadiusz", "Aleksiejuk");
             //act
             employee.AddGrade(2);
             employee.AddGrade(2);

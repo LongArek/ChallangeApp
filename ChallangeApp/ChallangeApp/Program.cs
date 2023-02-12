@@ -21,7 +21,7 @@ Console.WriteLine($"Max: {statisctics.Max}");
 
 
 
- 
+
 
 
 

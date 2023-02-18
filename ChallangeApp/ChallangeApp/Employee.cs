@@ -56,7 +56,6 @@
             this.AddGrade(shorT);
         }
 
-
         public Statistics GetStstistics()
         {
             var statistics = new Statistics();

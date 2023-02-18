@@ -1,11 +1,13 @@
 ﻿using ChallangeApp;
 
 var employee = new Employee("Arkadiusz", "Aleksiejuk");
-employee.AddGrade(2);
+employee.AddGrade("Arek");
+employee.AddGrade("4000");
 employee.AddGrade(2);
 employee.AddGrade(6);
 var statisctics = employee.GetStstistics();
-Console.WriteLine($"Avarage: {statisctics.Average:N1}");
+ 
+Console.WriteLine($"Avarage: {statisctics.Average:N2}");
 Console.WriteLine($"Min: {statisctics.Min}");
 Console.WriteLine($"Max: {statisctics.Max}");
 

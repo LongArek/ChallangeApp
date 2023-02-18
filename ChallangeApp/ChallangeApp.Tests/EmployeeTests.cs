@@ -1,6 +1,6 @@
 ﻿namespace ChallangeApp.Tests
 {
-    public class TypeTests
+    public class EmployeeTests
     {
         [Test]
         public void MaxStats()
@@ -13,7 +13,7 @@
             employee.AddGrade(6);
             var statistics = employee.GetStstistics();
             //assert
-            Assert.AreEqual(statistics.Max, 6.0f);
+            Assert.AreEqual(statistics.Max, 6);
         }
 
         [Test]
@@ -27,7 +27,7 @@
             employee.AddGrade(6);
             var statistics = employee.GetStstistics();
             //assert
-            Assert.AreEqual(statistics.Min, 2.0f);
+            Assert.AreEqual(statistics.Min, 2);
         }
 
         [Test]

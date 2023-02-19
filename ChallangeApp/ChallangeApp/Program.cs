@@ -5,15 +5,6 @@ employee.AddGrade("Arek");
 employee.AddGrade("4000");
 employee.AddGrade(2);
 employee.AddGrade(6);
-var statisctics = employee.GetStstistics();
-var statisctics1 = employee.GetStstisticsWithForEach();
-var statisctics2 = employee.GetStstisticsWithFor();
-var statisctics3 = employee.GetStstisticsWithDoWhile();
-var statisctics4 = employee.GetStstisticsWithWhile();
-
-Console.WriteLine($"Avarage: {statisctics.Average:N2}");
-Console.WriteLine($"Min: {statisctics.Min}");
-Console.WriteLine($"Max: {statisctics.Max}");
 
 
 

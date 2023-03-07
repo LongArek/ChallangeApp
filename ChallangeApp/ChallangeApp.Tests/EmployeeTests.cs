@@ -3,46 +3,25 @@
     public class EmployeeTests
     {
         [Test]
-        public void MaxStats()
+        public void LetterAverageCheck()
         {
             // arrange
             var employee = new Employee("Arkadiusz", "Aleksiejuk");
             //act
-            employee.AddGrade(2);
-            employee.AddGrade(2);
-            employee.AddGrade(6);
+            employee.AddGrade('e');
+            employee.AddGrade('a');
+            employee.AddGrade('D');
+            employee.AddGrade(80);
+            employee.AddGrade(80);
             var statistics = employee.GetStstistics();
             //assert
-            Assert.AreEqual(statistics.Max, 6);
-        }
-
-        [Test]
-        public void MinStats()
-        {
-            // arrange
-            var employee = new Employee("Arkadiusz", "Aleksiejuk");
-            //act
-            employee.AddGrade(2);
-            employee.AddGrade(2);
-            employee.AddGrade(6);
-            var statistics = employee.GetStstistics();
-            //assert
-            Assert.AreEqual(statistics.Min, 2);
-        }
-
-        [Test]
-        public void AverageStats()
-        {
-            // arrange
-            var employee = new Employee("Arkadiusz", "Aleksiejuk");
-            //act
-            employee.AddGrade(2);
-            employee.AddGrade(2);
-            employee.AddGrade(6);
-            var statistics = employee.GetStstistics();
-            //assert
-            Assert.AreEqual(statistics.Average, 3.33333325f);
+            Assert.AreEqual('b', statistics.AverageLetter);
+            Assert.AreEqual(64.0f, statistics.Average);
+            Assert.AreEqual(20, statistics.Min);
+            Assert.AreEqual(100.0f, statistics.Max);
         }
     }
 }
+
+
 
